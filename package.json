@@ -1,0 +1,27 @@
+{
+  "name": "mmm-easee-status",
+  "version": "1.0.0",
+  "description": "A premium MagicMirror² module for showing Easee EV charger status, charging power and dynamic current.",
+  "main": "node_helper.js",
+  "scripts": {
+    "start": "echo \"This module runs inside MagicMirror².\"",
+    "lint": "node --check node_helper.js && node --check MMM-Easee-Status.js"
+  },
+  "keywords": [
+    "magicmirror",
+    "magicmirror2",
+    "easee",
+    "ev",
+    "charger",
+    "electric-car",
+    "norway"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.9"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

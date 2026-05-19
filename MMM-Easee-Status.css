@@ -1,0 +1,304 @@
+.MMM-Easee-Status {
+  --easee-bg: rgba(2, 5, 10, 0.78);
+  --easee-panel: rgba(10, 14, 20, 0.55);
+  --easee-line: rgba(255, 255, 255, 0.16);
+  --easee-text: rgba(255, 255, 255, 0.92);
+  --easee-muted: rgba(255, 255, 255, 0.52);
+  --easee-green: #7ee83f;
+  --easee-yellow: #f4d35e;
+  --easee-red: #ff5d5d;
+  --easee-shadow: rgba(0, 0, 0, 0.65);
+}
+
+.mmm-easee-card {
+  width: 760px;
+  min-height: 430px;
+  display: grid;
+  grid-template-columns: 42% 58%;
+  gap: 26px;
+  padding: 34px 36px;
+  box-sizing: border-box;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 20% 78%, rgba(126, 232, 63, 0.13), transparent 28%),
+    radial-gradient(circle at 62% 28%, rgba(255, 255, 255, 0.06), transparent 24%),
+    linear-gradient(135deg, rgba(14, 18, 25, 0.92), rgba(0, 0, 0, 0.86));
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 22px 80px var(--easee-shadow), inset 0 0 50px rgba(255,255,255,0.025);
+  overflow: hidden;
+  color: var(--easee-text);
+}
+
+.mmm-easee-visual {
+  position: relative;
+  min-height: 355px;
+}
+
+.mmm-easee-charger {
+  position: absolute;
+  top: 10px;
+  left: 34px;
+  width: 138px;
+  height: 220px;
+  filter: drop-shadow(0 28px 30px rgba(0,0,0,0.7));
+  z-index: 2;
+}
+
+.charger-body {
+  position: relative;
+  width: 138px;
+  height: 220px;
+  border-radius: 26px 26px 34px 34px;
+  background: linear-gradient(150deg, #252b33 0%, #0b0f15 48%, #1c222b 100%);
+  border: 1px solid rgba(255,255,255,0.12);
+  clip-path: polygon(18% 0, 82% 0, 100% 14%, 86% 100%, 14% 100%, 0 14%);
+}
+
+.charger-brand {
+  position: absolute;
+  top: 46px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: rgba(255,255,255,0.9);
+}
+
+.charger-led {
+  position: absolute;
+  left: 50%;
+  top: 112px;
+  width: 5px;
+  height: 54px;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.26);
+  box-shadow: none;
+}
+
+.charger-led.charging,
+.charge-port.charging {
+  background: var(--easee-green);
+  box-shadow: 0 0 10px var(--easee-green), 0 0 28px rgba(126, 232, 63, 0.65);
+}
+
+.charger-led.ready,
+.charge-port.ready {
+  background: var(--easee-yellow);
+  box-shadow: 0 0 10px var(--easee-yellow), 0 0 28px rgba(244, 211, 94, 0.45);
+}
+
+.charger-cable {
+  position: absolute;
+  bottom: -68px;
+  left: 64px;
+  width: 28px;
+  height: 86px;
+  border-radius: 18px;
+  background: linear-gradient(90deg, #05070a, #222832, #05070a);
+  transform: rotate(-8deg);
+}
+
+.mmm-easee-car {
+  position: absolute;
+  left: 12px;
+  bottom: 6px;
+  width: 318px;
+  height: 164px;
+  opacity: 0.92;
+  filter: drop-shadow(0 30px 28px rgba(0,0,0,0.72));
+}
+
+.car-body {
+  position: absolute;
+  left: 8px;
+  bottom: 20px;
+  width: 285px;
+  height: 76px;
+  border-radius: 65px 86px 24px 20px;
+  background: linear-gradient(160deg, rgba(52,62,74,0.95), rgba(8,12,17,0.94) 58%, rgba(20,26,34,0.96));
+  border-top: 1px solid rgba(255,255,255,0.22);
+}
+
+.car-roof {
+  position: absolute;
+  left: 75px;
+  bottom: 75px;
+  width: 148px;
+  height: 66px;
+  border-radius: 120px 120px 12px 12px;
+  background: linear-gradient(145deg, rgba(44,54,66,0.68), rgba(6,10,15,0.95));
+  border-top: 1px solid rgba(255,255,255,0.2);
+  transform: skewX(-12deg);
+}
+
+.car-light {
+  position: absolute;
+  right: 34px;
+  bottom: 75px;
+  width: 58px;
+  height: 8px;
+  border-radius: 9px;
+  background: rgba(255,255,255,0.86);
+  box-shadow: 0 0 18px rgba(255,255,255,0.32);
+}
+
+.car-wheel {
+  position: absolute;
+  bottom: 4px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #1e2530 0 28%, #050608 30% 63%, #202733 65% 100%);
+  border: 3px solid rgba(255,255,255,0.06);
+}
+
+.wheel-left { left: 54px; }
+.wheel-right { right: 58px; }
+
+.charge-port {
+  position: absolute;
+  right: 84px;
+  bottom: 74px;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.28);
+}
+
+.charge-cable {
+  position: absolute;
+  right: 92px;
+  bottom: -18px;
+  width: 115px;
+  height: 130px;
+  border: 12px solid #070a0f;
+  border-right: 0;
+  border-top: 0;
+  border-radius: 0 0 0 90px;
+  transform: rotate(15deg);
+  opacity: 0.92;
+}
+
+.mmm-easee-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.mmm-easee-title {
+  font-size: 52px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  margin-bottom: 28px;
+  text-shadow: 0 0 24px rgba(255,255,255,0.12);
+}
+
+.mmm-easee-divider {
+  height: 1px;
+  background: var(--easee-line);
+  margin-bottom: 18px;
+}
+
+.mmm-easee-row {
+  min-height: 76px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid var(--easee-line);
+}
+
+.mmm-easee-row-left {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  min-width: 0;
+}
+
+.mmm-easee-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  background: rgba(255,255,255,0.20);
+}
+
+.mmm-easee-dot.active {
+  background: var(--easee-green);
+  box-shadow: 0 0 18px rgba(126,232,63,0.78);
+}
+
+.mmm-easee-dot.idle {
+  background: rgba(255,255,255,0.20);
+}
+
+.mmm-easee-icon {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.mmm-easee-icon svg {
+  width: 42px;
+  height: 42px;
+  fill: none;
+  stroke: rgba(255,255,255,0.92);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.mmm-easee-label {
+  font-size: 30px;
+  font-weight: 650;
+  color: var(--easee-text);
+  white-space: nowrap;
+}
+
+.mmm-easee-value {
+  font-size: 31px;
+  font-weight: 800;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.mmm-easee-value.accent {
+  color: var(--easee-green);
+  text-shadow: 0 0 16px rgba(126,232,63,0.20);
+}
+
+.mmm-easee-value.muted {
+  color: rgba(255,255,255,0.62);
+}
+
+.mmm-easee-loading,
+.mmm-easee-error {
+  font-size: 24px;
+  color: var(--easee-muted);
+  padding: 32px 0;
+}
+
+.mmm-easee-error {
+  color: var(--easee-red);
+}
+
+@media (max-width: 900px) {
+  .mmm-easee-card {
+    width: 620px;
+    grid-template-columns: 36% 64%;
+    padding: 28px;
+  }
+
+  .mmm-easee-title { font-size: 44px; }
+  .mmm-easee-label { font-size: 25px; }
+  .mmm-easee-value { font-size: 26px; }
+  .mmm-easee-visual { transform: scale(0.82); transform-origin: left center; }
+}
